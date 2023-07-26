@@ -1,339 +1,457 @@
 body {
-  padding-top: 115px;
-  background-image: url('../assets/img/wave.png');
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
+    padding-top: 115px;
+    background-image: url('../assets/img/wave.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
 }
 
 #mainNav {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: #18534F;
-  color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #18534F;
+    color: white;
 }
 
 @media (min-width: 992px) {
-  #mainNav {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border: none;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
-  }
+    #mainNav {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border: none;
+        transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    }
 
-  #mainNav .navbar-brand {
-    font-size: 1.5em;
-    transition: font-size 0.3s ease-in-out;
-  }
+    #mainNav .navbar-brand {
+        font-size: 1.5em;
+        transition: font-size 0.3s ease-in-out;
+    }
 
-  #mainNav .navbar-brand img {
-    height: 2rem;
-    transition: height 0.3s ease-in-out;
-  }
+    #mainNav .navbar-brand img {
+        height: 2rem;
+        transition: height 0.3s ease-in-out;
+    }
 
-  #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: #212529;
-  }
+    #mainNav.navbar-shrink {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: #212529;
+    }
 
-  #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.25em;
-  }
+    #mainNav.navbar-shrink .navbar-brand {
+        font-size: 1.25em;
+    }
 
-  #mainNav.navbar-shrink .navbar-brand svg,
-  #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
-  }
+    #mainNav.navbar-shrink .navbar-brand svg,
+    #mainNav.navbar-shrink .navbar-brand img {
+        height: 1.5rem;
+    }
 
-  #mainNav .navbar-nav .nav-item {
-    margin-right: 1rem;
-  }
+    #mainNav .navbar-nav .nav-item {
+        margin-right: 1rem;
+    }
 
-  #mainNav .navbar-nav .nav-item:last-child {
-    margin-right: 0;
-  }
+    #mainNav .navbar-nav .nav-item:last-child {
+        margin-right: 0;
+    }
 }
 
 header.masthead .container {
-  padding: 15px;
-  color: white;
+    padding: 15px;
+    color: white;
 }
 
 header .img-header {
-  text-align: center;
-  color: black;
-  width: 500px;
-  height: auto;
-  margin: auto;
+    text-align: center;
+    color: black;
+    width: 500px;
+    height: auto;
+    margin: auto;
 }
 
 header.masthead ul {
-  list-style: none;
+    list-style: none;
 }
 
 header.masthead ul li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 header.masthead ul li svg {
-  margin-right: 5px;
-  font-size: 23px;
-  transform: translateY(3px);
+    margin-right: 5px;
+    font-size: 23px;
+    transform: translateY(3px);
 }
 
 h2 {
-  margin-bottom: 1rem;
-  font-size: 2.8em;
-  line-height: 1.1em;
-  letter-spacing: -1px;
-  text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.8em;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+    text-align: center;
 }
 
 section.container {
-  padding-top: 5rem;
+    padding-top: 5rem;
 }
 
 h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 h4 {
-  font-size: 1.25rem;
-  /* font-weight: 700; */
-  margin-bottom: 1.1rem;
+    font-size: 1.25rem;
+    /* font-weight: 700; */
+    margin-bottom: 1.1rem;
 }
 
 p {
-  font-size: 0.75rem;
+    font-size: 0.75rem;
+}
+
+#etapes {
+    padding: 0 10%;
 }
 
 #etapes h3,
 #etapes h4 {
-  margin: 0;
+    margin: 0;
+}
+
+#etapes h3.padd-top {
+    padding-bottom: 30%;
+}
+
+#etapes h3.padd-bottom {
+    padding-top: 30%;
 }
 
 #etapes h3 {
-  height: 40px;
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#etapes .etapes-step .line-arrow {
+    background-color: #18534F;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#etapes .etapes-step .col-number {
+    color: #18534F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+#etapes .etapes-step .col-line {
+    width: calc(100% - 50px);
+}
+
+@media (max-width: 768px) {
+    #etapes {
+        padding: 0 5%;
+    }
+
+    #etapes .etapes-step .col-number span {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 20px !important;
+    }
+
+    #etapes .etapes-step .col-text h3 {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+#etapes .etapes-step .col-number span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: white;
+    border-radius: 100%;
+}
+
+#etapes .etapes-step .etapes-step-arrow {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid #18534F;
+}
+
+#etapes .etapes-step > .etapes-step-number:nth-child(2n +1) .etapes-step-arrow {
+    border-left-color: #226d68;
+}
+
+#etapes .etapes-step > .etapes-step-number:nth-child(2n +1) .line-arrow {
+    background-color: #226d68;
+}
+
+#etapes .etape-arrow > * > * {
+    z-index: 1;
+}
+
+#etapes .col-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#etapes .etape-arrow .col-text {
+    min-height: 400px;
+}
+
+#etapes .etape-arrow .etape-arrow-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 
 #etapes .etapes-number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  color: white;
-  width: 40px;
-  height: 40px;
-  font-size: 1.25rem;
-  border-radius: 100%;
-  background-image: linear-gradient(to right, #283048 0%, #859398 51%, #283048 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    background-image: linear-gradient(to right, var(--bs-body-color) 0%, #226d68 51%, var(--bs-body-color) 100%);
+    margin: auto;
+}
+
+#etapes .line {
+    position: absolute;
+    height: 4px;
+    background-color: #226d68;
+    z-index: auto;
+    transform-origin: left;
 }
 
 #etapes .col-etapes-number {
-  padding-right: 1em;
+    padding-right: 1em;
 }
 
 .line-horizontal {
-  border-left: 3px solid #576270;
-  margin: 0 1em;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 2px;
-  width: 10px;
-  z-index: auto;
+    border-left: 3px solid #576270;
+    margin: 0 1em;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 10px;
+    z-index: auto;
+}
+
+#etapes .canvas {
+    position: relative;
 }
 
 .etape-space {
-  z-index: 1;
+    z-index: 1;
 }
 
 #etapes h2 {
-  margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
 }
 
-.etape-criteres-web>* {
-  padding-top: 5px;
-  padding-bottom: 5px;
+.etape-criteres-web > * {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 
 .btn-devis {
-  cursor: pointer;
-  background-image: linear-gradient(to right, #D6955B 0%, #226d68 51%, #D6955B 100%);
-  margin: 10px auto;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  font-size: 1rem;
-  border-radius: 10px;
-  display: block;
-  width: 17em;
-  text-decoration: none;
-  font-weight: 700;
-  height: min-content;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #D6955B 0%, #226d68 51%, #D6955B 100%);
+    margin: 10px auto;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    font-size: 1rem;
+    border-radius: 10px;
+    display: block;
+    width: 17em;
+    text-decoration: none;
+    font-weight: 700;
+    height: min-content;
 }
 
 .btn-devis:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
 
 #services p {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 #services .examples-card {
-  margin: 1em auto;
-  text-align: center;
-  color: #18534F;
-  border-radius: 15px;
-  padding: 2em;
+    margin: 1em auto;
+    text-align: center;
+    color: #18534F;
+    border-radius: 15px;
+    padding: 2em;
 }
 
 #services .examples-card svg {
-  width: 18%;
-  height: auto;
-  margin-bottom: 15px;
+    width: 18%;
+    height: auto;
+    margin-bottom: 15px;
 }
 
 #services .examples-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 #services .examples-card p {
-  font-size: 0.875rem;
+    font-size: 0.875rem;
 }
 
 .text-background {
-  background-color: #18534F;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 15px;
+    background-color: #18534F;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+#portfolio h3 {
+    color: #D6955B;
+    text-align: center;
 }
 
 #portfolio .img-portfolio {
-  width: 100%;
-  height: auto;
-  margin: auto;
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
 
 #portfolio .portfolio-card {
-  border-radius: 15px;
-  box-shadow: #226D68 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  padding-bottom: 8px;
+    border-radius: 15px;
+    box-shadow: #226D68 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding-bottom: 8px;
+    margin: 15px;
 }
 
 #portfolio .portfolio-card h3 {
-  background-color: #226D68;
-  width: 100%;
-  border-radius: 15px 15px 0 0;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ecf8f6;
-  margin-bottom: 0;
+    background-color: #226D68;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ecf8f6;
+    margin-bottom: 0;
 }
 
 #portfolio .portfolio-card .eportfolio-carac {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #portfolio .portfolio-card .eportfolio-carac span {
-  background-color: #D6955B;
-  padding: 0.25rem 0.5rem;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  color: white;
-  letter-spacing: 0px;
-  margin: 5px 5px 5px;
+    background-color: #D6955B;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+    letter-spacing: 0px;
+    margin: 5px 5px 5px;
 }
 
 #portfolio .portfolio-card .link-page {
-  width: 100%;
-  height: 50px;
-  position: relative;
+    width: 100%;
+    height: 50px;
+    position: relative;
 }
 
 #portfolio .portfolio-card .wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #portfolio .portfolio-card .wrapper .link_wrapper {
-  position: relative;
+    position: relative;
 }
 
 #portfolio .portfolio-card .wrapper a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 40px;
-  line-height: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  background: #226D68;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  border: 3px solid #226D68;
-  transition: all .35s;
-  border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #226D68;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    border: 3px solid #226D68;
+    transition: all .35s;
+    border-radius: 15px;
 }
 
 #portfolio .portfolio-card .link-page {
-  position: relative;
+    position: relative;
 }
 
 #portfolio .portfolio-card .wrapper .icon {
-  width: 40px;
-  height: 40px;
-  border: 3px solid transparent;
-  position: absolute;
-  transform: rotate(45deg);
-  right: 0;
-  top: 0;
-  z-index: -1;
-  transition: all .35s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #portfolio .portfolio-card .wrapper .icon svg {
-  width: 30px;
-  transform: rotate(-45deg);
-  color: #226D68;
-  transition: all .35s;
+    width: 30px;
+    transform: rotate(-45deg);
+    color: #226D68;
+    transition: all .35s;
 }
 
 #portfolio .portfolio-card .wrapper a:hover {
-  width: 200px;
-  border: 3px solid #226D68;
-  background: transparent;
-  color: #226D68;
+    width: 200px;
+    border: 3px solid #226D68;
+    background: transparent;
+    color: #226D68;
 }
 
-#portfolio .portfolio-card .wrapper a:hover+.icon {
-  border: 3px solid #226D68;
-  right: -25%;
+#portfolio .portfolio-card .wrapper a:hover + .icon {
+    border: 3px solid #226D68;
+    right: -25%;
 }
