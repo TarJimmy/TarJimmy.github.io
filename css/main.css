@@ -6,6 +6,12 @@ body {
     background-size: contain;
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('../assets/img/wave-phone.png');
+    }
+}
+
 #mainNav {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -112,21 +118,35 @@ p {
     font-size: 0.75rem;
 }
 
+#etapes .etapes-btn-details {
+    font-weight: 700;
+    color: #226D68;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    border: 3px dashed transparent;
+    border-bottom-color: #226D68;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#etapes .etapes-btn-details:hover {
+    border: 3px solid #18534F;
+    padding: 5px;
+    color: #18534F;
+}
+
+
 #etapes {
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 #etapes h3,
 #etapes h4 {
     margin: 0;
-}
-
-#etapes h3.padd-top {
-    padding-bottom: 30%;
-}
-
-#etapes h3.padd-bottom {
-    padding-top: 30%;
 }
 
 #etapes h3 {
@@ -135,12 +155,17 @@ p {
     text-align: center;
 }
 
+#etapes .etapes-step .line-arrow h4 {
+    margin: 0;
+}
+
 #etapes .etapes-step .line-arrow {
     background-color: #18534F;
     color: white;
-    height: 100px;
+    height: 150px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 #etapes .etapes-step .col-number {
@@ -151,11 +176,13 @@ p {
     padding: 0 0.5rem;
 }
 
-#etapes .etapes-step .col-line {
-    width: calc(100% - 50px);
+@media screen and (min-width: 530px) {
+    .col-line-description {
+        padding-bottom: 2rem;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     #etapes {
         padding: 0 5%;
     }
@@ -166,12 +193,14 @@ p {
         font-size: 20px !important;
     }
 
-    #etapes .etapes-step .col-text h3 {
-        font-size: 1rem;
+    #etape h3 {
+        font-size: 1rem !important;
+        margin: 0 !important;
+        padding-left: 1rem !important;
     }
 
     h2 {
-        font-size: 1.8em;
+        font-size: 1.8em !important;
     }
 }
 
@@ -190,9 +219,87 @@ p {
 #etapes .etapes-step .etapes-step-arrow {
     width: 0;
     height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
     border-left: 50px solid #18534F;
+    position: relative;
+    margin-left: -1px;
+    color: white;
+}
+
+#etapes .etapes-step-number {
+    background-color: #18534FBB;
+    color: white;
+}
+
+#etapes .etapes-step .col-line {
+    width: calc(50% - 50px);
+}
+
+#etapes .etapes-step > .etapes-step-number:nth-child(2n) .col-line:not(.col-line-description) {
+    width: calc(40% - 50px);
+}
+
+#etapes .col-line-description-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 530px) {
+    #etapes .col-line-description-ul {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #etapes .col-line-description-ul ul {
+        margin: 0 !important;
+    }
+
+    #etapes .etapes-step .etapes-step-arrow {
+        border-top: 150px solid transparent !important;
+        border-bottom: 150px solid transparent !important;
+    }
+
+    #etapes .col-line-description {
+        padding-left: 1rem;
+    }
+
+    #etapes .etapes-step .line-arrow {
+        height: 300px !important;
+    }
+
+    .col-line {
+        min-width: calc(100% - 25px) !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #etapes .etapes-step .line-arrow {
+        height: 200px;
+    }
+
+    #etapes .etapes-step .etapes-step-arrow {
+        border-top: 100px solid transparent;
+        border-bottom: 100px solid transparent;
+    }
+
+    .col-line {
+        min-width: calc(100% - 50px) !important;
+    }
+
+    #etapes .etapes-step-number {
+        background-color: transparent !important;
+    }
+
+    #etapes .etapes-step-number .etapes-btn-details {
+        right: 50% !important;
+        transform: translateX(50%);
+    }
+}
+
+#etapes .etapes-step > .etapes-step-number:nth-child(2n +1) {
+    background-color: #226d68BB;
 }
 
 #etapes .etapes-step > .etapes-step-number:nth-child(2n +1) .etapes-step-arrow {
@@ -207,24 +314,64 @@ p {
     z-index: 1;
 }
 
+#etapes .col-line-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding-left: 1rem;
+}
+
+#etapes .etapes-step-number .etapes-btn-details {
+    color: white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 5px 5px 3px;
+    border-color: white;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+    width: max-content;
+}
+
+#etapes .col-line-description ul {
+    margin: 0 auto;
+}
+
 #etapes .col-text {
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
-#etapes .col-text h3 {
+
+#etapes .etape-arrow .col-text h3 {
     margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 1260px) and (max-width: 1520px) {
+    #etapes ul {
+        font-size: 0.9rem !important;
+    }
+}
 
-#etapes .col-text ul {
+@media screen and (min-width: 1521px) {
+    #etapes ul {
+        font-size: 0.9rem !important;
+    }
+}
+
+#etapes ul {
     padding: 0;
     list-style: none;
     font-size: 0.8rem;
     position: relative;
     max-width: 120%;
 }
-#etapes .col-text li svg {
+
+#etapes .etape-arrow .col-text li svg {
     color: #313239;
     margin-right: 5px;
 }
@@ -246,35 +393,27 @@ p {
     align-items: center;
     font-weight: 700;
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     font-size: 1.25rem;
     border-radius: 100%;
     background-image: linear-gradient(to right, var(--bs-body-color) 0%, #226d68 51%, var(--bs-body-color) 100%);
     margin: auto;
 }
 
-#etapes .line {
+#etapes .line,
+#container-arrow .line {
     position: absolute;
-    height: 4px;
+    height: 15px;
     background-color: #226d68;
     z-index: auto;
     transform-origin: left;
 }
 
-#etapes .col-etapes-number {
+#etapes .col-etapes-number,
+#container-arrow .col-etapes-number {
+    z-index: 1;
     padding-right: 1em;
-}
-
-.line-horizontal {
-    border-left: 3px solid #576270;
-    margin: 0 1em;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 2px;
-    width: 10px;
-    z-index: auto;
 }
 
 #etapes .canvas {
@@ -287,11 +426,6 @@ p {
 
 #etapes h2 {
     margin-bottom: 2rem;
-}
-
-.etape-criteres-web > * {
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
 
 
@@ -472,4 +606,170 @@ p {
 #portfolio .portfolio-card .wrapper a:hover + .icon {
     border: 3px solid #226D68;
     right: -25%;
+}
+
+.modal #container-arrow {
+    position: relative;
+}
+
+#container-arrow .line {
+    background-color: #D6955B;
+}
+
+.modal .modal-etapes-arrow-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 100%;
+    background-image: linear-gradient(to right, #FEEAA1 0%, #D6955B 51%, #FEEAA1 100%);
+    margin: auto;
+}
+
+.modal h3 {
+    font-size: 1.75rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: #D6955B;
+}
+
+.modal h4 {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #226D68;
+}
+
+.modal .etape-criteres-web h4 {
+    background: #D6955B;
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 20px 20px 0 0;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+}
+
+.modal .etape-criteres-web p svg {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-0.5rem);
+    color: #D6955B;
+}
+
+.modal p {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #226D68;
+}
+
+.modal .etape-criteres-web p {
+    padding: 8px 2em 1.5rem;
+    border: 5px solid #D6955B;
+    border-top: 0;
+    height: -webkit-fill-available;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+}
+
+.modal .etape-criteres-web {
+    position: relative;
+}
+
+.modal .etape-criteres-web > * {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.modal .modal-separator-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.modal .modal-icon-close {
+    font-size: 2rem;
+}
+
+.modal .text-background {
+    background-color: #D6955B;
+    color: white;
+}
+
+.col-separate {
+    border: 10px #D6955B;
+    margin-bottom: 2em;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: dotted;
+}
+
+
+#contact .contact-infos h3 {
+    text-align: left;
+}
+
+#contact .contact-infos {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15px 0 0 15px;
+}
+
+#contact .contact-infos a {
+    color: #226d68;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 769px) {
+    #contact .contact-form {
+        min-width: 650px;
+    }
+}
+
+#contact .contact-form {
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: #226D68 0 0 30px 15px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#contact address p {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+#contact address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact .contact-form label {
+    font-size: 0.8rem;
+}
+
+#contact .contact-form .row {
+    text-align: left;
+}
+
+#contact .form-control {
+    padding: 1em;
 }
