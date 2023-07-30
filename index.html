@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no" />
-    <meta name="description"
-        content="Réservez votre séjour dans notre gîte en Ardèche et profitez d'un hébergement de qualité dans un cadre idyllique.">
-    <meta name="author" content="TARDY Jimmy, jimmy.tardy-informatique@gmail.fr" />
-    <title>Jimmy TARDY - Création de votre projet web personnalisé sur mesure</title>
+    <meta name="author" content="TARDY Jimmy, jt@jimmy.tardy-informatique.fr" />
+    <title>Jimmy TARDY - Création de votre site web sur mesure</title>
     <meta name="description"
         content="Développeur depuis plusieurs années, je serai ravi de vous accompagner dans votre visibilité sur internet par des réalisations faites sur mesure.">
     <meta name="keywords"
-        content="eportfolio, site web vitrine, développement web, développeur informatique, prix abordables, portfolio, site vitrine, développement sur mesure">
+        content="eportfolio, site web vitrine, développement web, développeur informatique, prix abordables, portfolio, site vitrine, site  web, site de présentation, développement sur mesure">
 
     <meta property="og:title" content="Développeur Informatique - Création de votre projet sur mesure">
     <meta property="og:description"
@@ -47,7 +45,8 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#services">Nos Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Site web & réalisatiions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Eportfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#etapes">Notre collaboration</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -74,7 +73,7 @@
         <div class="row">
             <div class="col-12 col-md-4 examples-card">
                 <i class="fa-solid fa-desktop"></i>
-                <h3>Site vitrine</h3>
+                <h3>Site vitrine / Site web</h3>
                 <p>Création de votre site vitrine, institutionnel, blog, site d’association, etc.</p>
             </div>
             <div class="col-12 col-md-4 examples-card">
@@ -392,46 +391,47 @@
                         38100 Grenoble</p>
                     <p><b>Téléphone :</b><a class="ms-3" href="tel:+33644891555">+33 6 44 89 15 55</a></p>
                     <p><b>E-mail :</b><a class="ms-3"
-                            href="mailto:jimmy.tardy-info@gmail.com">jimmy.tardy-info@gmail.com</a></p>
+                            href="mailto:jt@jimmy-tardy-informatique.fr">jt@jimmy-tardy-informatique.fr</a></p>
                 </address>
             </div>
             <div class="col-11 mt-5 mt-md-auto col-lg-7 m-auto me-xl-0 contact-form">
 
-                <form method="post" method="POST" enctype="text/plain" action="mailto:tardyjim26@gmail.com" class="p-2 ml-lg-4 p-md-4">
+                <form method="POST" enctype="text/plain" class="p-2 ml-lg-4 p-md-4" id="contact-form">
                     <div class="row">
                         <div class="col-6 col-md-4 mb-2 p-2">
-                            <input type="text" class="form-control" name="lastname" placeholder="Prenom">
+                            <input type="text" class="form-control" name="lastname" placeholder="Prenom" required>
                         </div>
                         <div class="col-6 col-md-4 p-2">
-                            <input type="text" class="form-control" name="firstname" placeholder="Nom">
+                            <input type="text" class="form-control" name="firstname" placeholder="Nom" required>
                         </div>
                         <div class="col-12 col-md-4 p-2">
                             <input type="text" class="form-control" name="societe" placeholder="Société">
                         </div>
                         <div class="col-12 col-md-6 p-2">
-                            <input type="email" class="form-control mb-2" name="email" placeholder="Email">
+                            <input type="email" class="form-control mb-2" name="email" placeholder="Email" required>
                         </div>
                         <div class="col-12 col-md-6 p-2">
-                            <input type="tel" class="form-control mb-2" name="telephone" placeholder="Téléphone">
+                            <input type="tel" class="form-control mb-2" name="telephone" placeholder="Téléphone" required>
                         </div>
                         <div class="col-12 p-2">
                             <textarea class="form-control mb-4" name="message"
                                 placeholder="Quel type de projet ? Combien de page ? Y'a t-il des maquettes graphique à faire ?"
-                                rows="5"></textarea>
+                                rows="5" required></textarea>
                         </div>
                         <div class="col-12 col-md-6 p-2">
                             <label class="mb-2" for="day-call">Quand souhaitez-vous être rappelé ?</label>
-                            <input type="date" class="form-control mb-2" id="day-call">
+                            <input type="date" class="form-control mb-2" name="day-call">
                         </div>
                         <div class="col-12 col-md-6 p-2">
                             <label class="mb-2" for="hour-call">A quel heure ?</label>
-                            <input type="time" class="form-control mb-2" id="time-call">
+                            <input type="time" class="form-control mb-2" name="time-call">
                         </div>
                         <div class="col-12 p-2 text-left">
                             <p>En envoyant vos données vous acceptez qu’elles soient recueillies et utilisées pour le
                                 traitement de votre demande.</p>
                         </div>
                         <input class="btn btn-primary btn-block" type="submit" value="Valider">
+                        <div id="confirmation-message"></div>
                     </div>
                 </form>
             </div>
@@ -588,74 +588,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
         integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
         crossorigin="anonymous"></script>
-    <script>
-        const calculateArrow = function (canvasId, className) {
-            console.log(canvasId, className)
-            const canvas = document.getElementById(canvasId);
-            if (canvas) {
-                const etapeArrowNumbers = document.getElementsByClassName(className);
-
-                // Parcourir chaque étape arrow number
-                for (let i = 0; i < etapeArrowNumbers.length - 1; i++) {
-                    const lineId = "line-" + canvasId + '-' + i + "-" + (i + 1);
-                    let line = document.getElementById(lineId);
-                    if (!line) {
-                        line = document.createElement("div");
-                        line.classList.add("line");
-                        line.id = lineId;
-                        // Ajouter la div "line" dans le parent de l'étape actuelle
-                        canvas.appendChild(line);
-                    }
-
-                    const point1 = etapeArrowNumbers[i];
-                    const point2 = etapeArrowNumbers[i + 1];
-
-                    const coord1 = { x: point1.offsetLeft, y: point1.offsetTop };
-                    const coord2 = { x: point2.offsetLeft, y: point2.offsetTop };
-
-                    // Get distance between the points for length of line
-                    const a = coord1.x - coord2.x;
-                    const b = coord1.y - coord2.y;
-                    var length = Math.sqrt(a * a + b * b);
-
-                    // Get angle between points
-                    var angleDeg = Math.atan2(coord2.y - coord1.y, coord2.x - coord1.x) * 180 / Math.PI;
-
-                    // Get distance from edge of point to center
-                    var pointWidth = point1.clientWidth / 2;
-                    var pointHeight = point1.clientWidth / 2;
-
-                    // Set line distance and position
-                    // Add width/height from above so the line starts in the middle instead of the top-left corner
-                    line.style.width = length + 'px';
-                    line.style.left = (coord1.x + pointWidth) + 'px';
-                    line.style.top = (coord1.y + pointHeight) + 'px';
-                    // Rotate line to match angle between points
-                    line.style.rotate = angleDeg + "deg";
-                }
-            }
-        }
-        const calculateLineDisplay = () => {
-            calculateArrow("canvas", "etapes-arrow-number");
-            if (document.getElementById('etape-details').classList.contains('show')) {
-                calculateArrow('container-arrow', "modal-etapes-arrow-number");
-            }
-        };
-
-        addEventListener("load", calculateLineDisplay);
-        addEventListener("resize", calculateLineDisplay);
-        const calculateLineDialog = (e) => {
-            if (document.getElementById('etape-details').classList.contains('show')) {
-                calculateArrow('container-arrow', "modal-etapes-arrow-number");
-            } else {
-                setTimeout(() => {
-                    calculateLineDialog(e);
-                }, 10)
-            }
-        }
-        const modalDetails = document.getElementById('etape-details');
-        modalDetails.addEventListener('show.bs.modal', calculateLineDialog)
-    </script>
+    <script src="js/calculateArrow.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>

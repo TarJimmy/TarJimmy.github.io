@@ -1,34 +1,49 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Envoi d'un message par formulaire</title>
-</head>
+<?php
+mail('tardyjim26@gmail.com', 'sujet test', 'body emaiuil', "From: test@ovh.net\r\n")
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupérer les données du formulaire
+    $lastname = $_POST["lastname"];
+    $firstname = $_POST["firstname"];
+    $societe = $_POST["societe"];
+    $email = $_POST["email"];
+    $telephone = $_POST["telephone"];
+    $message = $_POST["message"];
+    $dayCall = $_POST["day-call"];
+    $hourCall = $_POST["hour-call"];
 
-<body>
-    <?php
-    if (isset($_POST['message'])) {
-        $entete  = 'MIME-Version: 1.0' . "\r\n";
-        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $entete .= 'From: webmaster@monsite.fr' . "\r\n";
-        $entete .= 'Reply-to: ' . $_POST['email'];
+    // Adresse e-mail où vous souhaitez recevoir le message
+    $to = "jt@jimmy-tardy-informatique.fr";
 
-        $message = 
-        '<h1>Envoi de mail depuis mon site</h1>
-        <p><b>Nom : </b>' . $_POST['nom'] . '<br>
-        <p><b>Prénom : </b>' . $_POST['prenom'] . '<br>
-        <p><b>Société : </b>' . $_POST['societe'] . '<br>
-        <p><b>Email : </b>' . $_POST['email'] . '<br>
-        <p><b>Téléphone : </b>' . $_POST['telephone'] . '<br>
-        <p><b>Rappel : </b>' . $_POST['day-call'] . ' à '. $_POST['hour-call'] .'<br><br>
-        
-        <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
+    // Sujet de l'e-mail
+    $subject = "[Site WEB]: Nouveau message de $lastname $firstname";
 
-        
-        $retour = mail('tardyjim26@gmail.com', 'Envoi depuis page Contact', $message, $entete);
-        if($retour)
-            echo '<p>Votre message a bien été envoyé.</p>';
+    // Corps du message
+    $email_body = "Nom: $lastname\n";
+    $email_body .= "Prénom: $firstname\n";
+    $email_body .= "Société: $societe\n";
+    $email_body .= "Email: $email\n";
+    $email_body .= "Téléphone: $telephone\n";
+    $email_body .= "Date de rappel souhaitée: $dayCall\n";
+    $email_body .= "Heure de rappel souhaitée: $hourCall\n";
+
+    $email_body .= "Message:\n$message\n";
+
+    // Entêtes de l'e-mail
+    $headers = "From: no-reply@jimmy-tardy-informatique.fr\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-type: text/plain; charset=utf-8";
+
+    // $myfile = fopen($email.".txt", "w")
+    // fwrite($myfile, $txt);
+    // fwrite($myfile, $email_body);
+    // fclose($myfile);
+    // Envoyer l'e-mail
+    if (mail($to, $subject, $email_body, $headers)) {
+        echo "Votre message a été envoyé avec succès.";
+    } else {
+        echo "Une erreur s'est produite lors de l'envoi de votre message.";
     }
-    ?>
-</body>
-</html>
+}
+?>
+
+

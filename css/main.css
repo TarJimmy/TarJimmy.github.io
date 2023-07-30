@@ -805,3 +805,9 @@ p {
 #contact .form-control {
     padding: 1em;
 }
+
+#confirmation-message {
+    margin-top: 2rem;
+    color: #226D68;
+    text-decoration: underline;
+}
